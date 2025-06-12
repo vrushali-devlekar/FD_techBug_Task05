@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar ------------ -->
+    <nav
+      class="p-3 flex justify-between items-center font-degular bg-slate-50 drop-shadow-xl fixed top-0 left-0 right-0 z-20"
+    >
+      <a href="" id="brand" class="flex items-center flex-1">
+        <img src="./images/asset1.webp" alt="logo" class="max-h-12 max-w-12" />
+        <h1 class="font-cherry text-lg tracking-widest">TechBug</h1>
+      </a>
+
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a
+          href="#pricing"
+          class="font-medium hover:text-pink-900 transition-all duration-200"
+          >Pricing</a
+        >
+        <a
+          href=""
+          class="font-medium hover:text-pink-900 transition-all duration-200"
+          >Docs</a
+        >
+        <a
+          href="#steps"
+          class="font-medium hover:text-pink-900 transition-all duration-200"
+          >Changelog</a
+        >
+        <a
+          href="#testimonials"
+          class="font-medium hover:text-pink-900 transition-all duration-200"
+          >About</a
+        >
+        <a
+          href="#faq"
+          class="font-medium hover:text-pink-900 transition-all duration-200"
+          >FAQs</a
+        >
+      </div>
+
+      <div class="lg:flex hidden flex-1 justify-end">
+        <button
+          class="flex items-center gap-2 border px-4 py-2 rounded-xl hover:drop-shadow-lg drop-shadow-md bg-slate-50 transition group"
+        >
+          <i class="fa-regular fa-file-lines"></i>
+          <span>Front-end Devloper</span>
+          <i
+            class="fa-solid fa-arrow-right text-black group-hover:translate-x-2 transition duration-300"
+          ></i>
+        </button>
+      </div>
+      <!-- hamburger  -->
+      <button class="lg:hidden" onclick="handleMenu()">
+        <!-- bar icon  -->
+        <i class="fa-solid fa-bars text-black text-2xl"></i>
+      </button>
+
+      <!-- on close div for nav  -->
+      <div
+        id="nav-dialog"
+        class="fixed md:hidden bg-white inset-0 p-3 transform transition-all duration-300 ease-in-out translate-x-full opacity-0 pointer-events-none"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a href="" id="brand" class="flex items-center">
+            <img
+              src="./images/asset1.webp"
+              alt="logo"
+              class="max-h-12 max-w-12"
+            />
+            <h1 class="font-cherry text-lg tracking-widest">TechBug</h1>
+          </a>
+          <!-- cancel icon -->
+          <button class="p-2" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-black text-2xl"></i>
+          </button>
+        </div>
+        <!-- here navbar a tags  -->
+        <div class="mt-6 bg-white">
+          <a
+            href="#pricing"
+            class="relative block font-medium m-3 p-3 pl-5 text-gray-700 transition-all duration-300 hover:text-primary hover:before:content-[''] hover:before:absolute hover:before:inset-y-0 hover:before:left-0 hover:before:w-1 hover:before:bg-primary hover:before:shadow-md hover:before:rounded-sm"
+          >
+            Pricing
+          </a>
+          <a
+            href="#"
+            class="relative block font-medium m-3 p-3 pl-5 text-gray-700 transition-all duration-300 hover:text-primary hover:before:content-[''] hover:before:absolute hover:before:inset-y-0 hover:before:left-0 hover:before:w-1 hover:before:bg-primary hover:before:shadow-md hover:before:rounded-sm"
+          >
+            Docs
+          </a>
+          <a
+            href="#steps"
+            class="relative block font-medium m-3 p-3 pl-5 text-gray-700 transition-all duration-300 hover:text-primary hover:before:content-[''] hover:before:absolute hover:before:inset-y-0 hover:before:left-0 hover:before:w-1 hover:before:bg-primary hover:before:shadow-md hover:before:rounded-sm"
+          >
+            Changelog
+          </a>
+          <a
+            href="#testimonials"
+            class="relative block font-medium m-3 p-3 pl-5 text-gray-700 transition-all duration-300 hover:text-primary hover:before:content-[''] hover:before:absolute hover:before:inset-y-0 hover:before:left-0 hover:before:w-1 hover:before:bg-primary hover:before:shadow-md hover:before:rounded-sm"
+          >
+            About
+          </a>
+          <a
+            href="#faq"
+            class="relative block font-medium m-3 p-3 pl-5 text-gray-700 transition-all duration-300 hover:text-primary hover:before:content-[''] hover:before:absolute hover:before:inset-y-0 hover:before:left-0 hover:before:w-1 hover:before:bg-primary hover:before:shadow-md hover:before:rounded-sm"
+          >
+            FADs
+          </a>
+          <button
+            class="flex text-black items-center gap-2 px-4 py-4 rounded-xl hover:bg-gray-100"
+          >
+            <span>Front-end Devloper</span>
+            <i
+              class="fa-solid fa-arrow-right text-black group-hover:translate-x-2 transition duration-300"
+            ></i>
+          </button>
+        </div>
+        <!-- <div class="h-[1px] bg-gray-200"></div> -->
+      </div>
+    </nav>
+    <!-- main  -->
+    <main class="mt-16">
+      <!-- hero section  -->
+      <div
+        id="hero"
+        class="min-h-screen bg-white bg-gradient-to-br from-primary via-orange-50 to-transparent"
+      >
+        <!-- main content  -->
+        <div
+          id="hero-container"
+          class="max-w-4xl mx-auto px-6 pb-32 pt-6 flex flex-col sm:items-center sm:text-center sm:pt-12"
+        >
+          <div
+            id="version-text"
+            class="flex items-center my-6 gap-2 border-2 border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-lg hover:shadow-xl hover:-translate-y-1 transition group"
+          >
+            <div
+              class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"
+            ></div>
+            <p class="font-medium text-yellow-600">
+              v0.21.45:
+              <span class="text-yellow-800">Find-in-page bug fixes</span>
+            </p>
+            <i
+              class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-2 transition duration-300"
+            ></i>
+          </div>
+          <!-- small sections  -->
+          <div id="hero-features" class="hidden sm:flex gap-8 my-6">
+            <div class="flex justify-center gap-2 items-center text-gray-500">
+              <i class="fa-regular fa-file-code text-sm"></i>
+              <p>Code Optional</p>
+            </div>
+            <div class="flex justify-center gap-2 items-center text-gray-500">
+              <i class="fa-solid fa-hand-back-fist text-sm"></i>
+              <p>Drag & Drop builder</p>
+            </div>
+            <div class="flex justify-center gap-2 items-center text-gray-500">
+              <i class="fa-solid fa-laptop text-sm"></i>
+              <p>Windows, Mac, Linux</p>
+            </div>
+          </div>
+          <h1
+            class="text-4xl font-bold leading-snug mt-4 text-gray-900 md:tracking-wider sm:text-5xl"
+          >
+            Built for Front-end Devs <br />
+            <span class="italic font-light pr-2">who </span> move fast.
+          </h1>
+          <p
+            class="text-xl text-gray-800 sm:text-lg mt-4 md:w-[750px] sm:leading-normal"
+          >
+            web publishing with a single command - HTML, CSS, and JavaScript
+            projects for free, straight from the command line. Just write your
+            code, run one command . who want a quick and easy way to share their
+            web creations.
+          </p>
+          <div
+            id="button-container"
+            class="mt-12 flex flex-col sm:flex-row w-fit gap-4"
+          >
+            <button
+              class="bg-gradient-to-r from-sky-800 to-sky-950 px-8 py-3 rounded-lg text-white drop-shadow-md hover:drop-shadow-lg hover:opacity-85 transition"
+            >
+              Download now
+            </button>
+            <button
+              class="px-8 py-3 rounded-lg border bg-white text-gray-800 drop-shadow-md hover:drop-shadow-lg hover:opacity-85 hover:border-gray-800 transition"
+            >
+              Read Docs
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- step by step -->
+      <!-- space  -->
+      <div id="steps" class="flex flex-col gap-6 container">
+        <h2 class="text-5xl sm:font-semibold mb-8">How it works</h2>
+        <!-- step1 ------------------------ -->
+        <div
+          id="step1"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-2 justify-between"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2 justify-center">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 1</span
+            >
+            <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+            <p class="text-lg opacity-80">
+              Copy and paste your web app url into ToDesktop. Customise your app
+              design, app icon and window frame UI with no code.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Multiple windows</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Offline support</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Launch on startup</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Menubar/tray menus</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Customisable menus</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Tabs (Mac only)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- side image  -->
+          <div class="w-full max-w-md mx-auto">
+            <img src="./images/asset 66.svg" alt="" />
+          </div>
+        </div>
+        <!-- step2 ------------------------ -->
+        <div
+          id="step2"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-2"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2 justify-center">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 2</span
+            >
+            <h3 class="text-4xl">Configure your app environment</h3>
+            <p class="text-lg opacity-80">
+              Control how your desktop app behaves across platforms. Configure
+              environment variables, security policies, splash screens, and
+              loading states—without touching a line of backend code.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Environment variables</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Custom splash screen</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Loading indicator</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Content security policy</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Auto-updates setup</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Background processes</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- side image  -->
+          <div class="w-full max-w-md mx-auto">
+            <img src="./images/step2.jpg" alt="" />
+          </div>
+        </div>
+        <!-- step3 ------------------------ -->
+        <div
+          id="step3"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-2"
+        >
+          <div class="flex flex-col gap-6 lg:w-1/2 justify-center">
+            <span
+              class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium"
+              >Step 3</span
+            >
+            <h3 class="text-4xl">Publish and distribute</h3>
+            <p class="text-lg opacity-80">
+              Package your app into native Windows, macOS, and Linux installers
+              with a single click. Host your static files or connect your CI/CD
+              pipeline for automated deployment.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Single-click
+                </a>
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Windows, macOS
+                </a>
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Auto-update support</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Static hosting ready</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >GitHub or Vercel integration</a
+                >
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-gray-500"></i>
+                <a
+                  href=""
+                  class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80 opacity-80"
+                  >Download link generation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- side image  -->
+          <div class="w-full max-w-md mx-auto">
+            <img src="./images/step3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- bento grid  -->
+      <div id="bento-grid" class="container">
+        <h2 class="text-5xl sm:font-semibold mb-8">
+          Tech Bug handles the details
+        </h2>
+        <div
+          id="grid-container"
+          class="flex flex-col gap-3 lg:grid lg:grid-cols-3"
+          style="grid-auto-rows: 96px"
+        >
+          <!-- big div  1-->
+          <div
+            class="row-start-1 row-end-3 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div  1-->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Native Notifications</h3>
+              <img src="./images/asset 37.png" alt="" />
+            </div>
+          </div>
+          <!-- big div 2 -->
+          <div
+            class="row-start-1 row-end-4 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div  -->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Up-to-date</h3>
+              <p>
+                We’ll ensure the underlying browser is up to date and deliver
+                performance improvements, security patches, & additional
+                features.
+              </p>
+              <img src="./images/asset 38.png" alt="" />
+            </div>
+          </div>
+          <!-- big div 3 -->
+          <div
+            class="row-start-1 row-end-3 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div  3-->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Smart Performance Boost</h3>
+
+              <img src="./images/asset 39.png" alt="" />
+            </div>
+          </div>
+          <!-- big div 4 -->
+
+          <!-- big div  5-->
+          <div
+            class="row-start-3 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div 5 -->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-6 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Cross-Platform Support</h3>
+              <p>
+                Get consistent notifications across web, desktop, and mobile
+                platforms—ensuring you're always in the loop.
+              </p>
+              <img
+                src="./images/Smartphone Message.jpeg"
+                alt=""
+                class="h-32 w-24 rounded-lg object-cover"
+              />
+            </div>
+          </div>
+          <!-- big div  6-->
+          <div
+            class="row-start-4 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div  6-->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-1 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Status Monitoring Dashboard</h3>
+
+              <img
+                src="./images/alert1.png"
+                alt=""
+                class="h-32 w-32 rounded-lg object-cover"
+              />
+            </div>
+            <!-- big div last  -->
+          </div>
+          <div
+            class="row-start-3 row-end-6 group rounded-2xl p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75"
+          >
+            <!-- small div 4 -->
+            <div
+              class="bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center gap-3 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75"
+            >
+              <h3 class="text-2xl">Automated Troubleshooting</h3>
+              <p>
+                Identify and resolve issues automatically with our smart
+                diagnostic tools
+              </p>
+              <img
+                src="./images/auto.jpeg"
+                alt=""
+                class="h-24 w-24 rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- companies feature line animation  -->
+      <div id="features-line" class="container mt-4">
+        <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+          <div id="line-4" class="flex gap-8 p-6">
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Custom Menus
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Trays
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Deep Linking
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Download Analytics
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Launch on startup
+            </h3>
+            <span>•</span>
+            <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-bold">
+              Static hosting ready
+            </h3>
+            <span>•</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- testimonials  -->
+      <div id="testimonials" class="container max-w-7xl mt-6">
+        <h2 class="text-5xl sm:font-semibold mb-8">Customers stories</h2>
+        <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+          <div id="left" class="flex flex-col gap-6 p-8">
+            <div class="h-5 w-fit">
+              <img
+                src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2044.svg"
+                alt=""
+              />
+            </div>
+            <h3 class="text-xl leading-relaxed">
+              ClickUp used ToDesktop to get their desktop app in front of
+              customers in days instead of months.
+            </h3>
+            <div id="tag-container" class="flex gap-3 flex-wrap">
+              <div
+                class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800"
+              >
+                <i class="fa-solid fa-check"></i>
+                <span class="font-degular font-medium">Chromeless UI</span>
+              </div>
+              <div
+                class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800"
+              >
+                <i class="fa-solid fa-check"></i>
+                <span class="font-degular font-medium">Native spellcheck</span>
+              </div>
+              <div
+                class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800"
+              >
+                <i class="fa-solid fa-check"></i>
+                <span class="font-degular font-medium"
+                  >Task time in menubar</span
+                >
+              </div>
+              <div
+                class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800"
+              >
+                <i class="fa-solid fa-check"></i>
+                <span class="font-degular font-medium"
+                  >Notification count in the dock
+                </span>
+              </div>
+              <div
+                class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800"
+              >
+                <i class="fa-solid fa-check"></i>
+                <span class="font-degular font-medium"
+                  >Global hotkey to create task</span
+                >
+              </div>
+            </div>
+            <p class="text-lg text-gray-500">
+              “TechBug provided us with a
+              <span class="text-gray-800">polished desktop app</span> in no
+              time. Their expert team guided us through a smooth migration from
+              our outdated legacy desktop app, enabling us to deliver
+              <span class="text-gray-800">new and improved features</span> to
+              our customers within days.”
+            </p>
+            <div id="user-card" class="flex gap-4">
+              <div class="w-12 h-12">
+                <img
+                  src="https://hairshepherd.com/wp-content/uploads/2019/04/JOHN-WICK-HAIRCUT-2019-269x300.jpg"
+                  alt=""
+                  class="rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col">
+                <h3 class="tracking-wider font-semibold">John Wick</h3>
+                <p class="text-gray-500">
+                  Founder & CEO, <a href="" class="anchorh">ClickUp</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="right" class="">
+            <img src="./images/asset 46.png" alt="" class="w-full" />
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between gap-4 mt-4">
+          <div class="rounded-2xl gradient-outer group lg:flex-1">
+            <div class="rounded-2xl p-6 gradient-inner flex flex-col gap-6">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full"
+                >
+                  <i class="fa-solid fa-code text-indigo-800"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Native APIs</h3>
+              </div>
+              <p class="text-lg text-gray-800">
+                What sets ToDesktop apart is its seamless integration with
+                native APIs using our existing web codebase. By tapping into
+                APIs like Tray and Notifications, we've crafted an exceptionally
+                polished desktop user experience.
+              </p>
+              <div class="flex gap-4 items-end">
+                <div class="flex">
+                  <div
+                    class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://tse2.mm.bing.net/th/id/OIP.O3ksQxAAimYZ8YTsE7lg2gHaLD?w=1280&h=1910&rs=1&pid=ImgDetMain"
+                      alt=""
+                      class="min-w-16 min-h-16 object-cover"
+                    />
+                  </div>
+                  <div
+                    class="w-12 h-12 rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://cdn.playbuzz.com/cdn/0bc00275-05dc-49eb-b10e-be05dedcb59a/02718d2f-75a8-4096-a596-154f5bc001de.jpg"
+                      alt=""
+                      class="w-12 h-12 object-cover items-center"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <h3>Ricky Eillish</h3>
+                  <a href="" class="anchorh w-fit text-gray-500">Rise</a>
+                </div>
+              </div>
+            </div>
+            <!-- text  -->
+          </div>
+          <div class="rounded-2xl gradient-outer group lg:flex-1">
+            <div class="rounded-2xl p-6 gradient-inner flex flex-col gap-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-pink-200 flex items-center justify-center rounded-full"
+                >
+                  <i class="fa-solid fa-sync text-pink-950"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Seamless Updates</h3>
+              </div>
+              <p class="text-lg text-gray-800">
+                No more rebuilding and re-deploying manually. Push your web
+                changes, and the desktop app updates automatically — it's that
+                simple. Our system auto-checks and applies updates in the
+                background, ensuring users always have the latest features
+              </p>
+              <div class="flex gap-4">
+                <div class="flex">
+                  <div
+                    class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://beardlong.com/wp-content/uploads/2024/10/a_handsome_man_with_medium-length_hair_messy_laye.jpg"
+                      alt=""
+                      class="min-w-16 min-h-16 object-cover"
+                    />
+                  </div>
+                  <div
+                    class="w-12 h-12 rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://tse4.mm.bing.net/th/id/OIP.7WhHi07xkhpzpad75v6yZgHaLH?rs=1&pid=ImgDetMain"
+                      alt=""
+                      class="w-12 h-12 object-cover items-center"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <h3>Liam Neeson</h3>
+                  <a href="" class="anchorh w-fit text-gray-500">Rise</a>
+                </div>
+              </div>
+            </div>
+            <!-- text  -->
+          </div>
+          <div class="rounded-2xl gradient-outer group lg:flex-1">
+            <div class="rounded-2xl p-6 gradient-inner flex flex-col gap-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-yellow-200 flex items-center justify-center rounded-full"
+                >
+                  <i class="fa-solid fa-laptop-code text-yellow-700"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Cross-Platform Ready</h3>
+              </div>
+              <p class="text-lg text-gray-800">
+                Build once and run anywhere — Windows, macOS, or Linux. Your app
+                looks and behaves natively on all platforms with zero extra
+                setup.Write once, run everywhere. Your app works seamlessly on
+                Windows, macOS, and Linux with native performance
+              </p>
+              <div class="flex gap-4">
+                <div class="flex">
+                  <div
+                    class="-mr-3 w-12 h-12 flex justify-center items-center rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://acemodels.gr/wp/wp-content/uploads/2022/02/large-1567841532-b148a6813a3ae2973a9c1d4edcc79ca5013.jpg"
+                      alt=""
+                      class="min-w-16 min-h-16 object-cover"
+                    />
+                  </div>
+                  <div
+                    class="w-12 h-12 rounded-full overflow-hidden border border-white"
+                  >
+                    <img
+                      src="https://i.pinimg.com/originals/ce/73/cb/ce73cbec03b3915dceabc1d9d3d6caba.jpg"
+                      alt=""
+                      class="w-12 h-12 object-cover items-center"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <h3>Bob Odenkirk</h3>
+                  <a href="" class="anchorh w-fit text-gray-500">Rise</a>
+                </div>
+              </div>
+            </div>
+            <!-- text  -->
+          </div>
+        </div>
+        <!-- 2nd----------------- -->
+      </div>
+
+      <!-- download dark theme  -->
+      <div
+        class="rounded-xl bg-black flex flex-col lg:flex-row items-start container pt-6 lg:pt-10"
+      >
+        <div id="left" class="flex flex-col gap-4 lg:gap-6 p-8 lg:flex-1">
+          <span class="text-gray-400 font-semibold"
+            >READY TO START BUILDING?</span
+          >
+          <h2 class="text-4xl leading-tight text-white lg:text-4xl">
+            Create your desktop app for free*
+          </h2>
+          <p class="text-md text-gray-400 lg:text-lg">
+            Techbug Builder will take you step-by-step through the process of
+            creating your first desktop app in just a few minutes.
+          </p>
+          <button
+            class="bg-blue text-white py-3 rounded-lg hover:bg-opacity-90 flex gap-4 justify-center items-center"
+          >
+            <i class="fa-solid fa-download"></i>
+            <span>Download Techbug Builder</span>
+          </button>
+          <p class="text-gray-400 text-xs italic leading-tight lg:pb-32">
+            *You can create a desktop app and run it on your computer for free.
+            You will only be charged if you want to create a distributable app
+            for your customers.
+          </p>
+        </div>
+        <div id="right" class="lg:w-1/2">
+          <img src="./images/asset 46.png" alt="" class="w-full" />
+        </div>
+      </div>
+      <!-- ----------------------  -->
+
+      <!-- ---------pricing -->
+      <div id="pricing" class="container">
+        <h2 class="text-5xl leading-normal sm:font-bold max-w-lg mb-6">
+          Choose a plan that fits your needs
+        </h2>
+        <div class="flex flex-col lg:flex-row mt-6 gap-4 lg:justify-between">
+          <!-- car1 --- -->
+          <div
+            class="w-full lg:w-1/3 border rounded-xl px-8 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-100"
+          >
+            <h3 class="text-4xl pt-12">Free</h3>
+            <p class="text-lg font-light">
+              For personal use or testing your app before deploying to
+              customers.
+            </p>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+            </ul>
+            <button
+              class="px-8 py-3 text-white bg-blue rounded-lg hover:bg-opacity-90 font-degular font-medium"
+            >
+              Buy Now
+            </button>
+          </div>
+          <!-- card end  -->
+          <!-- car1 --- -->
+          <div
+            class="relative w-full lg:w-1/3 border rounded-xl px-8 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-100"
+          >
+            <h3 class="text-4xl pt-12">Essential</h3>
+            <p class="text-lg font-light">For simple desktop apps.</p>
+            <h2 class="text-lg font-bold">
+              ₹500
+              <span class="text-gray-600 text-base">/month</span>
+            </h2>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+            </ul>
+            <button
+              class="px-8 py-3 text-white bg-blue rounded-lg hover:bg-opacity-90 font-degular font-medium"
+            >
+              Buy Now
+            </button>
+          </div>
+          <!-- card end  -->
+          <!-- car1 --- -->
+          <div
+            class="w-full lg:w-1/3 border rounded-xl px-8 pb-8 flex flex-col gap-6 relative lg:border-none lg:bg-slate-100"
+          >
+            <p
+              class="text-yellow-800 text-sm border rounded-full w-fit px-4 py-2 absolute top-0 right-8 -translate-y-1/2 font-semibold bg-gradient-to-br from-yellow-300 to-yellow-500"
+            >
+              Most Popular
+            </p>
+            <h3 class="text-4xl pt-12">Professional</h3>
+            <p class="text-lg font-light">For sophiscated desktop .</p>
+            <h2 class="text-lg font-bold">
+              ₹2000
+              <span class="text-gray-600 text-base">/month</span>
+            </h2>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-check text-green-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+              <li class="flex items-center gap-4">
+                <i class="fa-solid fa-xmark text-red-500"></i>
+                <span class="text-lg text-gray-800 font-light"
+                  >Free for personal use</span
+                >
+              </li>
+            </ul>
+            <button
+              class="px-8 py-3 text-white bg-blue rounded-lg hover:bg-opacity-90 font-degular font-medium"
+            >
+              Buy Now
+            </button>
+          </div>
+          <!-- card end  -->
+        </div>
+      </div>
+
+      <!-- FAQs --------------------- -->
+      <div id="faq" class="container">
+        <h2 class="text-5xl leading-normal sm:font-bold max-w-lg mb-6">FAQs</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+          <!-- faq 1 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-1">
+              <p class="font-semibold text-lg">Is techbug For Me?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-1" class="hidden text-lg font-light mt-6">
+              <p>
+                That depends! If you would like to distribute your web app to
+                your users as a downloadable desktop app then techbug is for
+                you.
+              </p>
+            </dd>
+          </div>
+          <!-- end  -->
+          <!-- faq 2 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-2">
+              <p class="font-semibold text-lg">Is it free?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-2" class="hidden text-lg font-light mt-6">
+              <p>Yes, there’s a free plan for personal use.</p>
+            </dd>
+          </div>
+          <!-- end  -->
+          <!-- faq 3 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-3">
+              <p class="font-semibold text-lg">Custom domain support?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-3" class="hidden text-lg font-light mt-6">
+              <p>Yes, paid plans let you connect your own domain.</p>
+            </dd>
+          </div>
+          <!-- end  -->
+          <!-- faq 4 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-4">
+              <p class="font-semibold text-lg">Any file limits?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-4" class="hidden text-lg font-light mt-6">
+              <p>
+                Free users have limits; higher plans support larger projects.
+              </p>
+            </dd>
+          </div>
+          <!-- end  -->
+          <!-- faq 5 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-5">
+              <p class="font-semibold text-lg">Can I update?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-5" class="hidden text-lg font-light mt-6">
+              <p>Yes, just re-upload your files to update the site.</p>
+            </dd>
+          </div>
+          <!-- end  -->
+          <!-- faq 6 -->
+          <div
+            class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6"
+          >
+            <dt class="flex justify-between items-center" aria-controls="faq-6">
+              <p class="font-semibold text-lg">How to deploy?</p>
+              <i
+                class="fa-solid fa-chevron-up -rotate-180 transition-transform"
+              ></i>
+            </dt>
+            <dd id="faq-6" class="hidden text-lg font-light mt-6">
+              <p>Upload your files and click Publish — it's live instantly.</p>
+            </dd>
+          </div>
+          <!-- end  -->
+        </div>
+      </div>
+    </main>
+    <!-- footer  -->
+    <footer class="container">
+      <div
+        class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8"
+      >
+        <a href="#" class="font-light text-gray-600">Documentation</a>
+        <div class="flex gap-8 text-lg">
+          <a href="#" class="text-blue hover:text-gray-900"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="text-gray-600 hover:text-gray-900"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+          <img
+            class="object-cover max-w-12 max-h-12"
+            src="./images/asset1.webp"
+            alt="Logo"
+          />
+          <span class="text-lg font-medium font-cherry">TechBug</span>
+        </a>
+      </div>
+      <div
+        id="sub-footer"
+        class="flex flex-col gap-6 items-center justify-center my-12"
+      >
+        <div class="flex gap-2 items-center">
+          <p class="text-sm text-gray-600">X Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">
+          © 2025 TechBug, Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

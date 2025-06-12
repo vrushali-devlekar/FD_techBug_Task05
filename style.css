@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Degular Display";
+
+  src: url("./font/DegularDisplay.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cherry bombone";
+
+  src: url("./font/cherrybombone.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  span {
+    @apply font-degular font-medium;
+  }
+
+  .container {
+    @apply px-8 py-6 max-w-6xl mt-10 mx-auto lg:px-8 lg:mt-20;
+  }
+  .anchorh {
+    @apply border-b  border-y-gray-300 hover:border-gray-700;
+  }
+  .gradient-outer {
+    @apply p-[2px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 transition duration-75;
+  }
+  .gradient-inner {
+    @apply group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 transition duration-75;
+  }
+}
