@@ -39,10 +39,11 @@ A modern and responsive landing page created as part of the TechBug Task series.
    ```bash
    git clone https://github.com/your-username/fd-techbug-task05.git
    cd fd-techbug-task05
+   npm install
+   npm run dev
+
 ```
-```
-npm install
-npm run dev
+
 
 
 ## 📃 License
