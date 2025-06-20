@@ -17,6 +17,7 @@ A modern and responsive landing page created as part of the TechBug Task series.
 | Desktop | Mobile |
 |--------|--------|
 | <img width="926" alt="image" src="https://github.com/user-attachments/assets/83ccd9cb-9f15-4c37-8d78-a85eb930df31" />
+| <img width="454" alt="image" src="https://github.com/user-attachments/assets/7c6662cb-b6e6-43e9-9e75-ee09e74a5447" /> |
 
 
 
