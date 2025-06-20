@@ -42,7 +42,7 @@ A modern and responsive landing page created as part of the TechBug Task series.
    npm install
    npm run dev
 
-```
+   ```
 
 
 
