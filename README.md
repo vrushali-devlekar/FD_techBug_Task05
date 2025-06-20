@@ -16,9 +16,10 @@ A modern and responsive landing page created as part of the TechBug Task series.
 
 | Desktop | Mobile |
 |--------|--------|
-| ![Desktop Screenshot](https://fd-techbug-task05.vercel.app/screenshot-desktop.jpg) | ![Mobile Screenshot](https://fd-techbug-task05.vercel.app/screenshot-mobile.jpg) |
+| <img width="926" alt="image" src="https://github.com/user-attachments/assets/83ccd9cb-9f15-4c37-8d78-a85eb930df31" />
 
-> _Optional: Add actual screenshot URLs or include them in your repo `/assets` and reference them accordingly._
+
+
 
 ## 🛠️ Tech Stack
 
@@ -31,3 +32,20 @@ A modern and responsive landing page created as part of the TechBug Task series.
 
 ## 📁 Folder Structure
 
+## 🚧 Setup & Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/fd-techbug-task05.git
+   cd fd-techbug-task05
+```
+```
+npm install
+npm run dev
+
+
+## 📃 License
+This project is licensed under the MIT License.
+
+
+Made with ❤️ by [Vrushali devlekar]
